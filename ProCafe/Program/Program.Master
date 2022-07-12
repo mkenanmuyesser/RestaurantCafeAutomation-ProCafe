@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Program.master.cs" Inherits="ProCafe.Program.Program" %>
+<%@ Import Namespace="ProCafe.Data" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head runat="server">
+        <title></title>
+        <asp:PlaceHolder ID="MetaPlaceHolder" runat="server" />
+        <script src="../Script/jquery.js"> </script>
+        <script src="../Script/jclock.js"> </script>
+        <script type="text/javascript">
+            function OnClientPageLoad(sender, args) {
+                setTimeout(function() {
+                    sender.set_status("");
+                }, 0);
+            }
+
+            if (navigator.userAgent.indexOf('iPhone') != -1 || navigator.userAgent.indexOf('Android') != -1) {
+                addEventListener("load", function() {
+                    setTimeout(hideURLbar, 0);
+                }, false);
+            }
+
+            function hideURLbar() {
+                window.scrollTo(0, 1);
+            }
+
+    </script>
+        <asp:ContentPlaceHolder ID="cphHead" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+    <body onload=" clock(); " onunload=" stop(); ">
+        <form id="form1" runat="server">
+            <telerik:RadScriptManager ID="RadScriptManager1" runat="server" EnablePageMethods="True">
+            </telerik:RadScriptManager>
+            <telerik:RadWindowManager runat="server" ID="RadWindowManagerProgram" EnableShadow="true"
+                                      Behaviors="None" DestroyOnClose="true"
+                                      OnClientPageLoad=" OnClientPageLoad ">
+            </telerik:RadWindowManager>
+            <div style="height: 680px; margin: 0px auto; width: 980px;">
+                <div>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 500px;">
+                                <asp:Label ID="LabelMarka" runat="server" Text="ProCafe v1.3"></asp:Label>
+                                <br />
+                                <br />
+                                <telerik:RadButton ID="RadButtonAnasayfa" runat="server" Text="Ana Menü" ButtonType="LinkButton" Width="64" Height="32" Font-Bold="true" PostBackUrl="Program_Main.aspx"></telerik:RadButton>                           
+                            </td>
+                            <td>
+                                <div style="float: right;">
+                                    <telerik:RadButton ID="RadButtonChat" runat="server" ButtonType="LinkButton" Text="Chat" Width="96" Height="64" Font-Bold="true" OnClick="RadButtonChat_Click" Visible="false"></telerik:RadButton>
+                                    <telerik:RadButton ID="RadButtonHesapMakinasi" runat="server" ButtonType="LinkButton" Text="H.Makinası" Width="64" Height="32" Font-Bold="true" OnClick="RadButtonHesapMakinasi_Click"></telerik:RadButton>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <telerik:RadTicker AutoStart="true" runat="server" ID="RadTickerBilgi" Loop="true" LineDuration="3000">
+                                </telerik:RadTicker>
+                            </td>
+                            <td>
+                                <div style="float: right;">
+                                    <span id="clock"></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <asp:ContentPlaceHolder ID="cphTop" runat="server">
+                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="cphMiddle" runat="server">
+                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="cphBottom" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>          
+        </form>
+    </body>
+</html>

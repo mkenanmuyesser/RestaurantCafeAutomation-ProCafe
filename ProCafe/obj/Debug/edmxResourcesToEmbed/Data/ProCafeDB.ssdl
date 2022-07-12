@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProCafeDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ProCafeDBModelStoreContainer">
+    <EntitySet Name="A_Siparis_Opsiyon" EntityType="ProCafeDBModel.Store.A_Siparis_Opsiyon" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="A_Siparis_Urun" EntityType="ProCafeDBModel.Store.A_Siparis_Urun" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="A_Urun_Opsiyon" EntityType="ProCafeDBModel.Store.A_Urun_Opsiyon" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Genel_Ayar" EntityType="ProCafeDBModel.Store.Genel_Ayar" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Kullanici" EntityType="ProCafeDBModel.Store.Kullanici" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Kullanici_Giris_Yetki" EntityType="ProCafeDBModel.Store.Kullanici_Giris_Yetki" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LogIslemleri" EntityType="ProCafeDBModel.Store.LogIslemleri" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Masa" EntityType="ProCafeDBModel.Store.Masa" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Musteri" EntityType="ProCafeDBModel.Store.Musteri" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Rezervasyon_Not_Hatirlatma" EntityType="ProCafeDBModel.Store.Rezervasyon_Not_Hatirlatma" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Siparis" EntityType="ProCafeDBModel.Store.Siparis" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_Kullanici_Tur" EntityType="ProCafeDBModel.Store.T_Kullanici_Tur" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_Masa_Kat_Bolge_Tur" EntityType="ProCafeDBModel.Store.T_Masa_Kat_Bolge_Tur" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_Urun_Kategori_Tur" EntityType="ProCafeDBModel.Store.T_Urun_Kategori_Tur" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="T_Urun_Opsiyon_Tur" EntityType="ProCafeDBModel.Store.T_Urun_Opsiyon_Tur" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Urun" EntityType="ProCafeDBModel.Store.Urun" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_A_Siparis_Opsiyon_Siparis" Association="ProCafeDBModel.Store.FK_A_Siparis_Opsiyon_Siparis">
+      <End Role="Siparis" EntitySet="Siparis" />
+      <End Role="A_Siparis_Opsiyon" EntitySet="A_Siparis_Opsiyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_A_Siparis_Opsiyon_T_Urun_Opsiyon_Tur" Association="ProCafeDBModel.Store.FK_A_Siparis_Opsiyon_T_Urun_Opsiyon_Tur">
+      <End Role="T_Urun_Opsiyon_Tur" EntitySet="T_Urun_Opsiyon_Tur" />
+      <End Role="A_Siparis_Opsiyon" EntitySet="A_Siparis_Opsiyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_A_Siparis_Urun_Siparis" Association="ProCafeDBModel.Store.FK_A_Siparis_Urun_Siparis">
+      <End Role="Siparis" EntitySet="Siparis" />
+      <End Role="A_Siparis_Urun" EntitySet="A_Siparis_Urun" />
+    </AssociationSet>
+    <AssociationSet Name="FK_A_Siparis_Urun_Urun" Association="ProCafeDBModel.Store.FK_A_Siparis_Urun_Urun">
+      <End Role="Urun" EntitySet="Urun" />
+      <End Role="A_Siparis_Urun" EntitySet="A_Siparis_Urun" />
+    </AssociationSet>
+    <AssociationSet Name="FK_A_Urun_Opsiyon_T_Urun_Opsiyon_Tur" Association="ProCafeDBModel.Store.FK_A_Urun_Opsiyon_T_Urun_Opsiyon_Tur">
+      <End Role="T_Urun_Opsiyon_Tur" EntitySet="T_Urun_Opsiyon_Tur" />
+      <End Role="A_Urun_Opsiyon" EntitySet="A_Urun_Opsiyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_A_Urun_Opsiyon_Urun" Association="ProCafeDBModel.Store.FK_A_Urun_Opsiyon_Urun">
+      <End Role="Urun" EntitySet="Urun" />
+      <End Role="A_Urun_Opsiyon" EntitySet="A_Urun_Opsiyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kullanici_Giris_Yetki_Kullanici" Association="ProCafeDBModel.Store.FK_Kullanici_Giris_Yetki_Kullanici">
+      <End Role="Kullanici" EntitySet="Kullanici" />
+      <End Role="Kullanici_Giris_Yetki" EntitySet="Kullanici_Giris_Yetki" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Kullanici_T_Kullanici_Tur" Association="ProCafeDBModel.Store.FK_Kullanici_T_Kullanici_Tur">
+      <End Role="T_Kullanici_Tur" EntitySet="T_Kullanici_Tur" />
+      <End Role="Kullanici" EntitySet="Kullanici" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Masa_T_Masa_Kat_Bolge_Tur" Association="ProCafeDBModel.Store.FK_Masa_T_Masa_Kat_Bolge_Tur">
+      <End Role="T_Masa_Kat_Bolge_Tur" EntitySet="T_Masa_Kat_Bolge_Tur" />
+      <End Role="Masa" EntitySet="Masa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Rezervasyon_Masa" Association="ProCafeDBModel.Store.FK_Rezervasyon_Masa">
+      <End Role="Masa" EntitySet="Masa" />
+      <End Role="Rezervasyon_Not_Hatirlatma" EntitySet="Rezervasyon_Not_Hatirlatma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparis_Kullanici" Association="ProCafeDBModel.Store.FK_Siparis_Kullanici">
+      <End Role="Kullanici" EntitySet="Kullanici" />
+      <End Role="Siparis" EntitySet="Siparis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparis_Kullanici1" Association="ProCafeDBModel.Store.FK_Siparis_Kullanici1">
+      <End Role="Kullanici" EntitySet="Kullanici" />
+      <End Role="Siparis" EntitySet="Siparis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparis_Kullanici2" Association="ProCafeDBModel.Store.FK_Siparis_Kullanici2">
+      <End Role="Kullanici" EntitySet="Kullanici" />
+      <End Role="Siparis" EntitySet="Siparis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparis_Musteri" Association="ProCafeDBModel.Store.FK_Siparis_Musteri">
+      <End Role="Musteri" EntitySet="Musteri" />
+      <End Role="Siparis" EntitySet="Siparis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparis_Satis_Masa" Association="ProCafeDBModel.Store.FK_Siparis_Satis_Masa">
+      <End Role="Masa" EntitySet="Masa" />
+      <End Role="Siparis" EntitySet="Siparis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urun_T_Kullanici_Tur" Association="ProCafeDBModel.Store.FK_Urun_T_Kullanici_Tur">
+      <End Role="T_Kullanici_Tur" EntitySet="T_Kullanici_Tur" />
+      <End Role="Urun" EntitySet="Urun" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urun_T_Urun_Kategori_Tur" Association="ProCafeDBModel.Store.FK_Urun_T_Urun_Kategori_Tur">
+      <End Role="T_Urun_Kategori_Tur" EntitySet="T_Urun_Kategori_Tur" />
+      <End Role="Urun" EntitySet="Urun" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="A_Siparis_Opsiyon">
+    <Key>
+      <PropertyRef Name="SiparisOpsiyon" />
+    </Key>
+    <Property Name="SiparisOpsiyon" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SiparisKey" Type="int" Nullable="false" />
+    <Property Name="UrunOpsiyonTurKey" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="A_Siparis_Urun">
+    <Key>
+      <PropertyRef Name="SiparisUrunKey" />
+    </Key>
+    <Property Name="SiparisUrunKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SiparisKey" Type="int" Nullable="false" />
+    <Property Name="UrunKey" Type="int" Nullable="false" />
+    <Property Name="SiparisParca" Type="bit" Nullable="false" />
+    <Property Name="SiparisOnay" Type="bit" Nullable="false" />
+    <Property Name="SiparisMutfakTeslim" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="A_Urun_Opsiyon">
+    <Key>
+      <PropertyRef Name="UrunOpsiyonKey" />
+    </Key>
+    <Property Name="UrunOpsiyonKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UrunKey" Type="int" />
+    <Property Name="OpsiyonKey" Type="int" />
+  </EntityType>
+  <EntityType Name="Genel_Ayar">
+    <Key>
+      <PropertyRef Name="GenelAyarKey" />
+    </Key>
+    <Property Name="GenelAyarKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GenelSirketAd" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenelFaturaBilgi" Type="nvarchar" MaxLength="500" />
+    <Property Name="GenelFaturaMesaj" Type="nvarchar" MaxLength="500" />
+    <Property Name="GenelSirketLogo" Type="image" />
+    <Property Name="GenelMutfakKullanimi" Type="bit" Nullable="false" />
+    <Property Name="GenelKdvDahil" Type="bit" Nullable="false" />
+    <Property Name="GenelIndirimOran" Type="tinyint" Nullable="false" />
+    <Property Name="GenelDefaultResim" Type="image" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kullanici">
+    <Key>
+      <PropertyRef Name="KullaniciKey" />
+    </Key>
+    <Property Name="KullaniciKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciTurKey" Type="int" />
+    <Property Name="KullaniciKullaniciAd" Type="nvarchar" MaxLength="20" />
+    <Property Name="KullaniciKullaniciParola" Type="nvarchar" MaxLength="20" />
+    <Property Name="KullaniciAd" Type="nvarchar" MaxLength="20" />
+    <Property Name="KullaniciSoyad" Type="nvarchar" MaxLength="20" />
+    <Property Name="KullaniciTcNo" Type="char" MaxLength="11" />
+    <Property Name="KullaniciSgkNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="KullaniciIseBaslamaTarihi" Type="date" Nullable="false" />
+    <Property Name="KullaniciSiparisIptalYetki" Type="bit" Nullable="false" />
+    <Property Name="KullaniciUcretsizSatisYetki" Type="bit" Nullable="false" />
+    <Property Name="KullaniciSabit" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kullanici_Giris_Yetki">
+    <Key>
+      <PropertyRef Name="KullaniciGirisYetkiKey" />
+    </Key>
+    <Property Name="KullaniciGirisYetkiKey" Type="int" Nullable="false" />
+    <Property Name="KullaniciGirisYetkiMasaSiparisYetki" Type="bit" Nullable="false" />
+    <Property Name="KullaniciGirisYetkiPaketSiparisYetki" Type="bit" Nullable="false" />
+    <Property Name="KullaniciGirisYetkiRezervasyonYetki" Type="bit" Nullable="false" />
+    <Property Name="KullaniciGirisYetkiMusterilerYetki" Type="bit" Nullable="false" />
+    <Property Name="KullaniciGirisYetkiMutfakYetki" Type="bit" Nullable="false" />
+    <Property Name="KullaniciGirisYetkiKasaIslemleriYetki" Type="bit" Nullable="false" />
+    <Property Name="KullaniciGirisYetkiRaporlarYetki" Type="bit" Nullable="false" />
+    <Property Name="KullaniciGirisYetkiStokTakibiYetki" Type="bit" Nullable="false" />
+    <Property Name="KullaniciGirisYetkiAyarlarYetki" Type="bit" Nullable="false" />
+    <Property Name="KullaniciGirisYetkiTanimlamalarYetki" Type="bit" Nullable="false" />
+    <Property Name="KullaniciGirisYetkiNotlarHatirlatmalarYetki" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LogIslemleri">
+    <Key>
+      <PropertyRef Name="LogKey" />
+    </Key>
+    <Property Name="LogKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciKey" Type="int" />
+    <Property Name="IslemTarih" Type="datetime" Nullable="false" />
+    <Property Name="YapilanIslem" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="IslemIcerik" Type="xml" />
+  </EntityType>
+  <EntityType Name="Masa">
+    <Key>
+      <PropertyRef Name="MasaKey" />
+    </Key>
+    <Property Name="MasaKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MasaKatBolgeKey" Type="int" />
+    <Property Name="MasaNo" Type="nvarchar" MaxLength="10" />
+    <Property Name="MasaKisi" Type="int" Nullable="false" />
+    <Property Name="MasaAciklama" Type="nvarchar" MaxLength="100" />
+    <Property Name="MasaAcik" Type="bit" Nullable="false" />
+    <Property Name="MasaAktif" Type="bit" Nullable="false" />
+    <Property Name="MasaSira" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Musteri">
+    <Key>
+      <PropertyRef Name="MusteriKey" />
+    </Key>
+    <Property Name="MusteriKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriAd" Type="nvarchar" MaxLength="50" />
+    <Property Name="MusteriSoyad" Type="nvarchar" MaxLength="50" />
+    <Property Name="MusteriUnvan" Type="nvarchar" MaxLength="50" />
+    <Property Name="MusteriTarih" Type="date" Nullable="false" />
+    <Property Name="MusteriTelefon" Type="nvarchar" MaxLength="20" />
+    <Property Name="MusteriAciklama" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Rezervasyon_Not_Hatirlatma">
+    <Key>
+      <PropertyRef Name="RezervasyonNotHatirlatmaKey" />
+    </Key>
+    <Property Name="RezervasyonNotHatirlatmaKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MasaKey" Type="int" />
+    <Property Name="RezervasyonNotHatirlatmaTip" Type="bit" Nullable="false" />
+    <Property Name="RezervasyonNotHatirlatmaTarihSaat" Type="datetime" Nullable="false" />
+    <Property Name="RezervasyonNotHatirlatmaAciklama" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Siparis">
+    <Key>
+      <PropertyRef Name="SiparisKey" />
+    </Key>
+    <Property Name="SiparisKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MasaKey" Type="int" />
+    <Property Name="SiparisiAlanKullaniciKey" Type="int" />
+    <Property Name="MutfakOnayKullaniciKey" Type="int" />
+    <Property Name="KasaOdemeKullaniciKey" Type="int" />
+    <Property Name="MusteriKey" Type="int" />
+    <Property Name="SiparisAlindiTarih" Type="datetime" Nullable="false" />
+    <Property Name="SiparisMutfakOnayTarih" Type="datetime" />
+    <Property Name="SiparisHesapKapatildiTarih" Type="datetime" />
+    <Property Name="SiparisToplam" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="SiparisOdenen" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="SiparisAd" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiparisSoyad" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiparisTelefon" Type="nvarchar" MaxLength="20" />
+    <Property Name="SiparisAdres" Type="nvarchar" MaxLength="100" />
+    <Property Name="SiparisAciklama" Type="nvarchar" MaxLength="500" />
+    <Property Name="SiparisYazildi" Type="bit" Nullable="false" />
+    <Property Name="SiparisIptal" Type="bit" Nullable="false" />
+    <Property Name="SiparisUcretsizKapatma" Type="bit" Nullable="false" />
+    <Property Name="SiparisParcali" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Kullanici_Tur">
+    <Key>
+      <PropertyRef Name="KullaniciTurKey" />
+    </Key>
+    <Property Name="KullaniciTurKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciTurAd" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="T_Masa_Kat_Bolge_Tur">
+    <Key>
+      <PropertyRef Name="MasaKatBolgeKey" />
+    </Key>
+    <Property Name="MasaKatBolgeKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MasaKatBolgeAd" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="T_Urun_Kategori_Tur">
+    <Key>
+      <PropertyRef Name="UrunKategoriTurKey" />
+    </Key>
+    <Property Name="UrunKategoriTurKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UrunKategoriTurAd" Type="nvarchar" MaxLength="20" />
+    <Property Name="UrunKategoriResim" Type="image" />
+    <Property Name="UrunKategoriTurSiralama" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Urun_Opsiyon_Tur">
+    <Key>
+      <PropertyRef Name="UrunOpsiyonTurKey" />
+    </Key>
+    <Property Name="UrunOpsiyonTurKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UrunOpsiyonAd" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Urun">
+    <Key>
+      <PropertyRef Name="UrunKey" />
+    </Key>
+    <Property Name="UrunKey" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UrunKategoriTurKey" Type="int" Nullable="false" />
+    <Property Name="KullaniciTurKey" Type="int" />
+    <Property Name="UrunAd" Type="nvarchar" MaxLength="20" />
+    <Property Name="UrunFiyat" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="UrunSiralama" Type="int" Nullable="false" />
+    <Property Name="UrunAciklama" Type="nvarchar" MaxLength="100" />
+    <Property Name="UrunAktif" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_A_Siparis_Opsiyon_Siparis">
+    <End Role="Siparis" Type="ProCafeDBModel.Store.Siparis" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="A_Siparis_Opsiyon" Type="ProCafeDBModel.Store.A_Siparis_Opsiyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Siparis">
+        <PropertyRef Name="SiparisKey" />
+      </Principal>
+      <Dependent Role="A_Siparis_Opsiyon">
+        <PropertyRef Name="SiparisKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_A_Siparis_Opsiyon_T_Urun_Opsiyon_Tur">
+    <End Role="T_Urun_Opsiyon_Tur" Type="ProCafeDBModel.Store.T_Urun_Opsiyon_Tur" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="A_Siparis_Opsiyon" Type="ProCafeDBModel.Store.A_Siparis_Opsiyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Urun_Opsiyon_Tur">
+        <PropertyRef Name="UrunOpsiyonTurKey" />
+      </Principal>
+      <Dependent Role="A_Siparis_Opsiyon">
+        <PropertyRef Name="UrunOpsiyonTurKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_A_Siparis_Urun_Siparis">
+    <End Role="Siparis" Type="ProCafeDBModel.Store.Siparis" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="A_Siparis_Urun" Type="ProCafeDBModel.Store.A_Siparis_Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Siparis">
+        <PropertyRef Name="SiparisKey" />
+      </Principal>
+      <Dependent Role="A_Siparis_Urun">
+        <PropertyRef Name="SiparisKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_A_Siparis_Urun_Urun">
+    <End Role="Urun" Type="ProCafeDBModel.Store.Urun" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="A_Siparis_Urun" Type="ProCafeDBModel.Store.A_Siparis_Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urun">
+        <PropertyRef Name="UrunKey" />
+      </Principal>
+      <Dependent Role="A_Siparis_Urun">
+        <PropertyRef Name="UrunKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_A_Urun_Opsiyon_T_Urun_Opsiyon_Tur">
+    <End Role="T_Urun_Opsiyon_Tur" Type="ProCafeDBModel.Store.T_Urun_Opsiyon_Tur" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="A_Urun_Opsiyon" Type="ProCafeDBModel.Store.A_Urun_Opsiyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Urun_Opsiyon_Tur">
+        <PropertyRef Name="UrunOpsiyonTurKey" />
+      </Principal>
+      <Dependent Role="A_Urun_Opsiyon">
+        <PropertyRef Name="OpsiyonKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_A_Urun_Opsiyon_Urun">
+    <End Role="Urun" Type="ProCafeDBModel.Store.Urun" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="A_Urun_Opsiyon" Type="ProCafeDBModel.Store.A_Urun_Opsiyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urun">
+        <PropertyRef Name="UrunKey" />
+      </Principal>
+      <Dependent Role="A_Urun_Opsiyon">
+        <PropertyRef Name="UrunKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kullanici_Giris_Yetki_Kullanici">
+    <End Role="Kullanici" Type="ProCafeDBModel.Store.Kullanici" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Kullanici_Giris_Yetki" Type="ProCafeDBModel.Store.Kullanici_Giris_Yetki" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanici">
+        <PropertyRef Name="KullaniciKey" />
+      </Principal>
+      <Dependent Role="Kullanici_Giris_Yetki">
+        <PropertyRef Name="KullaniciGirisYetkiKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Kullanici_T_Kullanici_Tur">
+    <End Role="T_Kullanici_Tur" Type="ProCafeDBModel.Store.T_Kullanici_Tur" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Kullanici" Type="ProCafeDBModel.Store.Kullanici" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Kullanici_Tur">
+        <PropertyRef Name="KullaniciTurKey" />
+      </Principal>
+      <Dependent Role="Kullanici">
+        <PropertyRef Name="KullaniciTurKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Masa_T_Masa_Kat_Bolge_Tur">
+    <End Role="T_Masa_Kat_Bolge_Tur" Type="ProCafeDBModel.Store.T_Masa_Kat_Bolge_Tur" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Masa" Type="ProCafeDBModel.Store.Masa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Masa_Kat_Bolge_Tur">
+        <PropertyRef Name="MasaKatBolgeKey" />
+      </Principal>
+      <Dependent Role="Masa">
+        <PropertyRef Name="MasaKatBolgeKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Rezervasyon_Masa">
+    <End Role="Masa" Type="ProCafeDBModel.Store.Masa" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Rezervasyon_Not_Hatirlatma" Type="ProCafeDBModel.Store.Rezervasyon_Not_Hatirlatma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Masa">
+        <PropertyRef Name="MasaKey" />
+      </Principal>
+      <Dependent Role="Rezervasyon_Not_Hatirlatma">
+        <PropertyRef Name="MasaKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparis_Kullanici">
+    <End Role="Kullanici" Type="ProCafeDBModel.Store.Kullanici" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Siparis" Type="ProCafeDBModel.Store.Siparis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanici">
+        <PropertyRef Name="KullaniciKey" />
+      </Principal>
+      <Dependent Role="Siparis">
+        <PropertyRef Name="SiparisiAlanKullaniciKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparis_Kullanici1">
+    <End Role="Kullanici" Type="ProCafeDBModel.Store.Kullanici" Multiplicity="0..1" />
+    <End Role="Siparis" Type="ProCafeDBModel.Store.Siparis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanici">
+        <PropertyRef Name="KullaniciKey" />
+      </Principal>
+      <Dependent Role="Siparis">
+        <PropertyRef Name="MutfakOnayKullaniciKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparis_Kullanici2">
+    <End Role="Kullanici" Type="ProCafeDBModel.Store.Kullanici" Multiplicity="0..1" />
+    <End Role="Siparis" Type="ProCafeDBModel.Store.Siparis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kullanici">
+        <PropertyRef Name="KullaniciKey" />
+      </Principal>
+      <Dependent Role="Siparis">
+        <PropertyRef Name="KasaOdemeKullaniciKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparis_Musteri">
+    <End Role="Musteri" Type="ProCafeDBModel.Store.Musteri" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Siparis" Type="ProCafeDBModel.Store.Siparis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musteri">
+        <PropertyRef Name="MusteriKey" />
+      </Principal>
+      <Dependent Role="Siparis">
+        <PropertyRef Name="MusteriKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparis_Satis_Masa">
+    <End Role="Masa" Type="ProCafeDBModel.Store.Masa" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Siparis" Type="ProCafeDBModel.Store.Siparis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Masa">
+        <PropertyRef Name="MasaKey" />
+      </Principal>
+      <Dependent Role="Siparis">
+        <PropertyRef Name="MasaKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urun_T_Kullanici_Tur">
+    <End Role="T_Kullanici_Tur" Type="ProCafeDBModel.Store.T_Kullanici_Tur" Multiplicity="0..1" />
+    <End Role="Urun" Type="ProCafeDBModel.Store.Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Kullanici_Tur">
+        <PropertyRef Name="KullaniciTurKey" />
+      </Principal>
+      <Dependent Role="Urun">
+        <PropertyRef Name="KullaniciTurKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urun_T_Urun_Kategori_Tur">
+    <End Role="T_Urun_Kategori_Tur" Type="ProCafeDBModel.Store.T_Urun_Kategori_Tur" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Urun" Type="ProCafeDBModel.Store.Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_Urun_Kategori_Tur">
+        <PropertyRef Name="UrunKategoriTurKey" />
+      </Principal>
+      <Dependent Role="Urun">
+        <PropertyRef Name="UrunKategoriTurKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

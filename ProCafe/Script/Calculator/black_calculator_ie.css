@@ -1,0 +1,8 @@
+.blackCalculator a:hover {
+    border: 1px solid #ccc;
+    color: #A7A9AC;
+}
+
+.blackCalculator form input[type=text] { border: 1px solid #C6C6C6; }
+
+.blackCalculator form input[type=text]:hover { border: 1px solid #AAAAAA; }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="db5450b0021d4620a24847a5839e4bc2" Name="Diagram1">
+        <EntityTypeShape EntityType="ProCafeDBModel.A_Siparis_Opsiyon" Width="1.5" PointX="7.5537234822072667" PointY="1.0945042972893009" />
+        <EntityTypeShape EntityType="ProCafeDBModel.A_Siparis_Urun" Width="1.5" PointX="0.0487121623236277" PointY="20.125310281349957" />
+        <EntityTypeShape EntityType="ProCafeDBModel.A_Urun_Opsiyon" Width="1.5" PointX="0.20459659034600322" PointY="20.144803593002635" />
+        <EntityTypeShape EntityType="ProCafeDBModel.Genel_Ayar" Width="1.5" PointX="8.74944317562014" PointY="28.610552771301265" />
+        <EntityTypeShape EntityType="ProCafeDBModel.Kullanici" Width="1.5" PointX="1.4967692408230011" PointY="30.388683720672823" />
+        <EntityTypeShape EntityType="ProCafeDBModel.Kullanici_Giris_Yetki" Width="1.5" PointX="1.9781605759533871" PointY="31.209655701746073" />
+        <EntityTypeShape EntityType="ProCafeDBModel.LogIslemleri" Width="1.5" PointX="2.151724650595209" PointY="28.003000227735843" />
+        <EntityTypeShape EntityType="ProCafeDBModel.Masa" Width="1.5" PointX="2.8052103942284408" PointY="7.5874068176315195" />
+        <EntityTypeShape EntityType="ProCafeDBModel.Musteri" Width="1.5" PointX="0.32272460699208294" PointY="9.3555617972070166" />
+        <EntityTypeShape EntityType="ProCafeDBModel.Rezervasyon_Not_Hatirlatma" Width="1.5" PointX="7.3502923675581311" PointY="10.106295053896632" />
+        <EntityTypeShape EntityType="ProCafeDBModel.Sipari" Width="1.5" PointX="8.0905949641440973" PointY="1.6858805872899856" />
+        <EntityTypeShape EntityType="ProCafeDBModel.T_Kullanici_Tur" Width="1.5" PointX="11.628652067682078" PointY="13.929151452113478" />
+        <EntityTypeShape EntityType="ProCafeDBModel.T_Masa_Kat_Bolge_Tur" Width="1.5" PointX="3.2351724725380411" PointY="28.014378068975351" />
+        <EntityTypeShape EntityType="ProCafeDBModel.T_Urun_Kategori_Tur" Width="1.5" PointX="2.2465774185241094" PointY="26.367830318570057" />
+        <EntityTypeShape EntityType="ProCafeDBModel.T_Urun_Opsiyon_Tur" Width="1.5" PointX="7.2255234416693082" PointY="23.065400015127565" />
+        <EntityTypeShape EntityType="ProCafeDBModel.Urun" Width="1.5" PointX="0.83518500851243038" PointY="5.7364897158632475" />
+        <AssociationConnector Association="ProCafeDBModel.FK_A_Siparis_Opsiyon_Siparis" />
+        <AssociationConnector Association="ProCafeDBModel.FK_A_Siparis_Opsiyon_T_Urun_Opsiyon_Tur" />
+        <AssociationConnector Association="ProCafeDBModel.FK_A_Siparis_Urun_Siparis" />
+        <AssociationConnector Association="ProCafeDBModel.FK_A_Siparis_Urun_Urun" />
+        <AssociationConnector Association="ProCafeDBModel.FK_A_Urun_Opsiyon_T_Urun_Opsiyon_Tur" />
+        <AssociationConnector Association="ProCafeDBModel.FK_A_Urun_Opsiyon_Urun" />
+        <AssociationConnector Association="ProCafeDBModel.FK_Kullanici_Giris_Yetki_Kullanici" />
+        <AssociationConnector Association="ProCafeDBModel.FK_Kullanici_T_Kullanici_Tur" />
+        <AssociationConnector Association="ProCafeDBModel.FK_Siparis_Kullanici" />
+        <AssociationConnector Association="ProCafeDBModel.FK_Siparis_Kullanici1" />
+        <AssociationConnector Association="ProCafeDBModel.FK_Siparis_Kullanici2" />
+        <AssociationConnector Association="ProCafeDBModel.FK_Masa_T_Masa_Kat_Bolge_Tur" />
+        <AssociationConnector Association="ProCafeDBModel.FK_Rezervasyon_Masa" />
+        <AssociationConnector Association="ProCafeDBModel.FK_Siparis_Satis_Masa" />
+        <AssociationConnector Association="ProCafeDBModel.FK_Siparis_Musteri" />
+        <AssociationConnector Association="ProCafeDBModel.FK_Urun_T_Kullanici_Tur" />
+        <AssociationConnector Association="ProCafeDBModel.FK_Urun_T_Urun_Kategori_Tur" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
